@@ -4,8 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DSViaCEP</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  
+   <header>
+      <nav>
+        <h1>DSViaCEP</h1>
+        <div>Contato</div>
+      </nav>
+      <main>
+        <section id="form-section">
+          <div>
+            <form name="newAddress">
+            <div>
+              <label for="cep">CEP: </label>
+              <input name="cep" id="cep" type="text" placeholder="CEP">
+            </div>
+            <div>
+              <label for="street">Logradouro: </label>
+              <input name="street" id="street" type="text" placeholder="Logradouro">
+            </div>
+            <div>
+              <label for="number">Número: </label>
+              <input name="number" id="number" type="text" placeholder="Número">
+            </div>
+            <div>
+              <label for="cidade">Cidade: </label>
+              <input name="cidade" id="cidade" type="text" placeholder="Cidade">
+            </div>
+          </form>
+          <div>
+            <button type="submit">Salvar</button>
+            <button>Limpar</button>
+          </div>
+
+        </div>
+        </section>
+        <section id="list-section">
+          <div>
+            <h3>São Paulo</h3>
+            <p>Rua dos jardins, 720</p>
+            <p>11200=345</p>
+          </div>
+          <div>
+            <h3>São Paulo</h3>
+            <p>Rua dos jardins, 720</p>
+            <p>11200=345</p>
+          </div>
+        </section>
+      </main>
+
+   </header>
 </body>
 </html>
