@@ -36,3 +36,46 @@ html, body {
   color: #fff;
   cursor: pointer;
 }
+
+.form-container {
+  padding: 40px 30px;
+}
+
+.card-form {
+  background-color: #333;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-control label{
+  display: none;
+}
+
+.error-message {
+  color: #faa;
+  margin-top: 5px;
+}
+
+.form-input {
+  height: 50px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 0 20px;
+  font-size: 14px;
+  border: 0;
+}
+
+.form-input::placeholder {
+  color: #c9c9c9;
+}
+
+.form-input:disabled {
+  background-color: #ddd;
+}
