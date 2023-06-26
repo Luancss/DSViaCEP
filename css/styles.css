@@ -79,3 +79,27 @@ html, body {
 .form-input:disabled {
   background-color: #ddd;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 250px;
+  height: 50px;
+  background-color: #ff8400;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-left {
+  margin-right: 10px;
+}
+
+.btn-right {
+  margin-left: 10px;
+}
