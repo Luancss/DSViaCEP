@@ -1,5 +1,5 @@
 import Address from "../models/address.js";
-import * as requestService from '../services/request-service.js';
+import * as addressService from '../services/address-service.js';
 
 function State() {
   this.address = new Address();
@@ -33,13 +33,34 @@ export function init() {
     state.inputNumber.addEventListener('change', handleInputNumberChange);
     state.btnClear.addEventListener('click', handleBtnClearClick);
     state.btnSave.addEventListener('click', handleBtnSaveClick);
+    state.inputCep.addEventListener('change', handleInputCepChange);
+}
 
+
+
+async function handleInputCepChange(event) {
+    const cep = event.target.value;
+
+    try {
+    const address = await addressService.findBycep(cep);
+
+    state.inputStreet.value = address.street;
+    state.inputCity.value = address.city;
+    state.address = address;
+
+    setFormError("cep", "")
+    state.inputNumber.focus();
+  }
+  catch (e) {
+    state.inputStreet.value = "";
+    state.inputCity.value = "";
+    setFormError("cep", "Informe um CEP válido");
+
+  }
 }
 
 async function handleBtnSaveClick(event) {
   event.preventDefault();
-  const result = await requestService.getJson('https://viacep.com.br/ws/01001000/json/');
-  console.log(result);
 }
 
 function handleInputNumberChange (event) {
